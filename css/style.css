@@ -13,6 +13,7 @@
 }
 
 body {
+    color: var(--dark-liver);
     background-color: var(--black-shadows);
     font-family: 'Padauk', sans-serif;
 }
@@ -108,6 +109,13 @@ body {
     }
 }
 
+hr {
+    background-color: var(--dark-liver);
+    border: none;
+    height: 1px;
+    border-radius: 5px;
+}
+
 #container {
     margin: 1rem;
 }
@@ -150,4 +158,247 @@ body {
     .home span.info {
         font-size: 1.6rem;
     }
+}
+
+.knowledge {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.knowledge div span {
+    transition: all 5s;
+    transform-origin: center;
+}
+
+.knowledge div:hover span {
+    transform: rotate(360deg);
+    text-shadow: 0 0 30px;
+    cursor: pointer;
+}
+
+.knowledge .html span{
+    position: absolute;
+    translate: -30% -100%;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .css span{
+    position: absolute;
+    translate: -150% 50%;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .javascript span{
+    position: absolute;
+    translate: 50% 50%;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .javascript span{
+    position: absolute;
+    translate: -10% 300%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .react span{
+    position: absolute;
+    translate: 30% 50%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .git span{
+    position: absolute;
+    translate: -300% -300%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.knowledge .bootstrap span{
+    position: absolute;
+    translate: -10% -400%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    width: 30vw;
+    height: auto;
+    border: none;
+    background-color: var(--dark-liver);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px var(--dark-liver);
+}
+
+.about picture img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.about span {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--black-shadows);
+    box-shadow: 0 0 5px;
+    border-radius: 50px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+}
+
+.form .title {
+    font-size: 16pt;
+}
+
+.form label span {
+    font-size: 14pt;
+}
+
+.form label input {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-gray);
+    color: var(--dark-liver);
+    outline: none;
+    transition: all .5s;
+    padding: .2rem .5rem;
+}
+
+.form label input:focus {
+    transform: translateY(-5%);
+    box-shadow: 0 0 10px;
+    background-color: var(--honeydew);
+}
+
+.form label textarea {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-gray);
+    color: var(--dark-liver);
+    outline: none;
+    transition: all .5s;
+    padding: .5rem .5rem;
+    resize: none;
+}
+
+.form label textarea:focus {
+    transform: translateY(-5%);
+    box-shadow: 0 0 10px;
+    background-color: var(--honeydew);
+}
+
+.form button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--honeydew);
+    padding: .5rem .8rem;
+    color: var(--dark-liver);
+    font-weight: bold;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.form button:hover {
+    box-shadow: 0 0 5px;
+    transform: translateY(-5%);
+}
+
+.contact {
+    position: relative;
+}
+
+.contact .options {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap: 1rem;
+}
+
+.contact .options button {
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.contact .options button:hover picture img{
+    transform: translateY(-5%);
+    box-shadow: 0 1px 5px 0;
+}
+
+.contact .options button picture {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact .options button picture img {
+    border-radius: 50%;
+    width: 100%;
+    background: transparent;
+    transition: all .5s;
+}
+
+.contact .options button.whatsapp picture img {
+    width: 100%;
 }
