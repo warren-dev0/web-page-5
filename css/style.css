@@ -242,6 +242,79 @@ hr {
     font-size: 2.5rem;
 }
 
+@media (min-width: 330px) {
+    .knowledge .html {
+    translate: 0rem 0rem;
+    font-size: 5rem;
+}
+
+.knowledge .css {
+    translate: 6rem 9rem;
+    font-size: 4rem;
+}
+
+.knowledge .javascript {
+    translate: -4rem -6rem;
+    font-size: 3rem;
+}
+
+.knowledge .git {
+    translate: -6rem 6rem;
+    font-size: 4.5rem;
+}
+
+.knowledge .bootstrap {
+    translate: 2rem -12rem;
+    font-size: 3.5rem;
+}
+
+.knowledge .react {
+    translate: -3rem 15rem;
+    font-size: 3.5rem;
+}
+}
+
+@media (min-width: 576px) {
+        .knowledge .html {
+    translate: 0rem 0rem;
+    font-size: 6rem;
+}
+
+.knowledge .css {
+    translate: 8rem 10rem;
+    font-size: 5rem;
+}
+
+.knowledge .javascript {
+    translate: -6rem -8rem;
+    font-size: 4rem;
+}
+
+.knowledge .git {
+    translate: -8rem 8rem;
+    font-size: 5.5rem;
+}
+
+.knowledge .bootstrap {
+    translate: 4rem -16rem;
+    font-size: 4.5rem;
+}
+
+.knowledge .react {
+    translate: -4rem 18rem;
+    font-size: 4.5rem;
+}
+}
+
+@media (min-width: 768px) {
+    .home span.name {
+        font-size: 5rem;
+    }
+    .home span.info {
+        font-size: 1.6rem;
+    }
+}
+
 .about {
     display: flex;
     flex-direction: column;
@@ -294,6 +367,8 @@ hr {
     padding: 1rem;
     gap: 1rem;
 }
+
+
 
 .form label {
     display: flex;
