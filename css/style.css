@@ -133,6 +133,7 @@ hr {
 
 .home span {
     text-align: center;
+    width: 80%;
 }
 
 .home span.name {
@@ -141,10 +142,19 @@ hr {
 
 .home span.info {
     font-family: 'Caveat', cursive;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 330px) {
+    .home span.name {
+        font-size: 1.5rem;
+    }
+    .home span.info {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 330px) {
     .home span.name {
         font-size: 2rem;
     }
@@ -158,7 +168,7 @@ hr {
         font-size: 4rem;
     }
     .home span.info {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 }
 
@@ -167,7 +177,7 @@ hr {
         font-size: 5rem;
     }
     .home span.info {
-        font-size: 1.6rem;
+        font-size: 3rem;
     }
 }
 
@@ -184,7 +194,7 @@ hr {
     display: flex;
 }
 
-.knowledge div:hover span {
+.knowledge div span {
     text-shadow: 0 0 5px;
     opacity: .8;
     animation: 5s ease-out 0s infinite text-move;
@@ -206,10 +216,6 @@ hr {
     100% {
         transform: rotate(0deg);
     }
-}
-
-.knowledge div:hover span{
-    transform: rotate(25deg);
 }
 
 .knowledge .html {
@@ -343,6 +349,7 @@ hr {
 }
 
 .about span {
+    font-size: 14pt;
     text-align: center;
     font-family: 'Caveat', cursive;
 }
@@ -366,6 +373,7 @@ hr {
     border-radius: 50px;
     padding: 1rem;
     gap: 1rem;
+    background-color: var(--black-shadows);
 }
 
 
@@ -440,6 +448,7 @@ hr {
     position: absolute;
     bottom: 0;
     gap: 1rem;
+    z-index: -5;
 }
 
 .contact .options button {
