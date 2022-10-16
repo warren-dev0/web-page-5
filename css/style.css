@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Padauk:wght@400;700&display=swap');
+
 :root {
     --dark-liver: #615055;
     --mountbatten-pink: #946e83;
@@ -12,6 +14,7 @@
 
 body {
     background-color: var(--black-shadows);
+    font-family: 'Padauk', sans-serif;
 }
 
 #nav-bar {
@@ -127,6 +130,7 @@ body {
 }
 
 .home span.info {
+    font-family: 'Caveat', cursive;
     font-size: 1rem;
 }
 
