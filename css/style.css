@@ -30,6 +30,8 @@ body {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 1rem;
     width: 4rem;
     height: auto;
     gap: .90rem;
@@ -142,6 +144,15 @@ hr {
     font-size: 1rem;
 }
 
+@media (max-width: 330px) {
+    .home span.name {
+        font-size: 2rem;
+    }
+    .home span.info {
+        font-size: 1rem;
+    }
+}
+
 @media (min-width: 576px) {
     .home span.name {
         font-size: 4rem;
@@ -160,104 +171,81 @@ hr {
     }
 }
 
+
 .knowledge {
     display: flex;
-    flex-direction: column;
-    width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
-.knowledge div span {
-    transition: all 5s;
-    transform-origin: center;
+.knowledge div {
+    position: absolute;
+    display: flex;
 }
 
 .knowledge div:hover span {
-    transform: rotate(360deg);
-    text-shadow: 0 0 30px;
-    cursor: pointer;
+    text-shadow: 0 0 5px;
+    opacity: .8;
+    animation: 5s ease-out 0s infinite text-move;
 }
 
-.knowledge .html span{
-    position: absolute;
-    translate: -30% -100%;
-    font-size: 5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
+@keyframes text-move {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
-.knowledge .css span{
-    position: absolute;
-    translate: -150% 50%;
+.knowledge div:hover span{
+    transform: rotate(25deg);
+}
+
+.knowledge .html {
+    translate: 0rem 0rem;
     font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
 }
 
-.knowledge .javascript span{
-    position: absolute;
-    translate: 50% 50%;
-    font-size: 4rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
-}
-
-.knowledge .javascript span{
-    position: absolute;
-    translate: -10% 300%;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
-}
-
-.knowledge .react span{
-    position: absolute;
-    translate: 30% 50%;
+.knowledge .css {
+    translate: 6rem 9rem;
     font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
 }
 
-.knowledge .git span{
-    position: absolute;
-    translate: -300% -300%;
-    font-size: 3.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
+.knowledge .javascript {
+    translate: -4rem -6rem;
+    font-size: 2rem;
 }
 
-.knowledge .bootstrap span{
-    position: absolute;
-    translate: -10% -400%;
+.knowledge .git {
+    translate: -6rem 6rem;
     font-size: 3.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px;
+}
+
+.knowledge .bootstrap {
+    translate: 2rem -12rem;
+    font-size: 2.5rem;
+}
+
+.knowledge .react {
+    translate: -3rem 15rem;
+    font-size: 2.5rem;
 }
 
 .about {
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -284,6 +272,15 @@ hr {
 .about span {
     text-align: center;
     font-family: 'Caveat', cursive;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .form {
@@ -361,10 +358,6 @@ hr {
 .form button:hover {
     box-shadow: 0 0 5px;
     transform: translateY(-5%);
-}
-
-.contact {
-    position: relative;
 }
 
 .contact .options {
